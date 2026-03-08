@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Site Clarity provides accessibility and usability reviews to help organisations make websites easier to use."
+    content="Site Clarity provides accessibility and usability reviews to help make websites easier to use."
   />
   <title>Site Clarity | Accessibility and Usability Reviews</title>
   <style>
     :root {
       --text: #333333;
       --bg: #ffffff;
-      --accent: #1877f2;
-      --accent-dark: #145dbf;
+      --accent: #0f4c81;
+      --accent-hover: #0c3d67;
       --border: #d9d9d9;
-      --soft: #f5f8ff;
-      --max-width: 1100px;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --soft: #f4f8fc;
+      --radius: 14px;
+      --max-width: 760px;
     }
 
     * {
@@ -43,7 +42,7 @@
 
     a:hover,
     a:focus {
-      color: var(--accent-dark);
+      color: var(--accent-hover);
     }
 
     a:focus,
@@ -59,11 +58,10 @@
       left: 12px;
       top: -48px;
       background: var(--accent);
-      color: #fff;
+      color: #ffffff;
       padding: 0.75rem 1rem;
       border-radius: 8px;
       text-decoration: none;
-      z-index: 1000;
     }
 
     .skip-link:focus {
@@ -76,97 +74,15 @@
     }
 
     header {
-      border-bottom: 1px solid var(--border);
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .btn,
-    button {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      border: 0;
-      border-radius: 999px;
-      padding: 0.9rem 1.25rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover,
-    .btn:focus,
-    button:hover,
-    button:focus {
-      background: var(--accent-dark);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-    }
-
-    .btn-secondary:hover,
-    .btn-secondary:focus {
-      background: var(--soft);
-      color: var(--accent-dark);
-      border-color: var(--accent-dark);
+      padding: 3.5rem 0 2rem;
+      background: var(--bg);
     }
 
     .hero {
-      padding: 4.5rem 0 3rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
       background: var(--soft);
-      color: var(--accent-dark);
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
     }
 
     h1,
@@ -177,109 +93,72 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(2rem, 5vw, 3rem);
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-size: clamp(1.5rem, 4vw, 2rem);
       margin-bottom: 1rem;
     }
 
     h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
       margin-top: 0;
       margin-bottom: 1rem;
-      max-width: 70ch;
+      max-width: 65ch;
     }
 
-    .hero-actions {
-      display: flex;
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.9rem 1.25rem;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    main section {
+      padding: 2.5rem 0 0;
+    }
+
+    .points {
+      display: grid;
       gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
     }
 
-    .hero-card,
-    .card,
+    .point,
     .testimonial,
-    .example {
-      background: #fff;
+    form {
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      background: #ffffff;
     }
 
-    .hero-card {
-      padding: 1.5rem;
-    }
-
-    .hero-card ul {
-      margin: 0;
-      padding-left: 1.25rem;
-    }
-
-    section {
-      padding: 3rem 0;
-    }
-
-    .intro,
-    .purpose,
-    .examples,
-    .testimonials,
-    .contact {
-      border-top: 1px solid var(--border);
-    }
-
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .card {
-      padding: 1.5rem;
-    }
-
-    .example-grid,
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .example,
+    .point,
     .testimonial {
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
 
-    .example strong,
-    .testimonial strong {
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-
-    .quote {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-grid {
+    .testimonials {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
+      gap: 1rem;
     }
 
     form {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
       padding: 1.5rem;
     }
 
@@ -301,71 +180,48 @@
       border-radius: 10px;
       font: inherit;
       color: var(--text);
-      background: #fff;
+      background: #ffffff;
     }
 
     textarea {
-      min-height: 160px;
+      min-height: 140px;
       resize: vertical;
     }
 
-    .small-text {
+    .small {
       font-size: 0.95rem;
-      color: #555;
+      color: #555555;
     }
 
     footer {
-      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      background: var(--accent);
+      color: #ffffff;
       padding: 2rem 0;
-      background: #fff;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: start;
+    footer a {
+      color: #ffffff;
     }
 
-    .footer-grid p {
-      margin-bottom: 0.35rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .contact-grid,
-      .cards-3,
-      .example-grid,
-      .testimonial-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 3rem;
-      }
+    footer a:hover,
+    footer a:focus {
+      color: #ffffff;
+      text-decoration: underline;
     }
 
     @media (max-width: 640px) {
-      .nav-wrap {
-        align-items: flex-start;
+      header {
+        padding: 2rem 0 1rem;
       }
 
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
+      .hero {
+        padding: 1.5rem;
       }
 
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn,
-      .btn-secondary,
-      button {
-        text-align: center;
+      .button {
         width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -374,93 +230,128 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header>
-    <div class="container nav-wrap">
-      <a class="brand" href="#top">Site Clarity</a>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#intro">Intro</a></li>
-          <li><a href="#purpose">Purpose</a></li>
-          <li><a href="#examples">Examples</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a class="btn" href="#contact">Request a review</a>
+    <div class="container">
+      <div class="hero">
+        <h1>Website accessibility and usability reviews</h1>
+        <p>
+          Site Clarity reviews websites to identify accessibility and usability issues
+          that may make them harder to use.
+        </p>
+        <p>
+          Reports explain findings in plain English and suggest practical improvements
+          to help websites feel clearer, easier to navigate, and easier to use on mobile.
+        </p>
+        <a class="button" href="#contact">Request a review</a>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Accessibility and usability reviews</span>
-          <h1>Clear website reviews that help more people use your site</h1>
-          <p>
-            Many websites contain accessibility and usability issues that make them harder
-            to use. This can affect people with disabilities, visitors on mobile devices,
-            and customers who leave because content is unclear or difficult to navigate.
-          </p>
-          <p>
-            Site Clarity provides straightforward reviews that identify common problems,
-            explain them in plain English, and suggest practical improvements.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="#contact">Get in touch</a>
-            <a class="btn btn-secondary" href="#examples">See example findings</a>
-          </div>
+    <section aria-labelledby="purpose-heading">
+      <div class="container">
+        <h2 id="purpose-heading">Purpose</h2>
+        <div class="points">
+          <article class="point">
+            <h3>Clear findings</h3>
+            <p>
+              Reviews highlight common issues such as poor heading structure, unclear links,
+              weak contrast, and forms that may be difficult to use.
+            </p>
+          </article>
+
+          <article class="point">
+            <h3>Useful suggestions</h3>
+            <p>
+              Each report focuses on practical changes that can improve clarity,
+              accessibility, and the overall user experience.
+            </p>
+          </article>
+
+          <article class="point">
+            <h3>Better outcomes</h3>
+            <p>
+              A clearer website can help more visitors stay on the page, find what they need,
+              and get in touch.
+            </p>
+          </article>
         </div>
-
-        <aside class="hero-card" aria-labelledby="common-issues-title">
-          <h2 id="common-issues-title">Common issues we spot</h2>
-          <ul>
-            <li>Images without useful descriptions</li>
-            <li>Poor heading structure</li>
-            <li>Unclear link text</li>
-            <li>Low colour contrast</li>
-            <li>Forms that are hard to complete</li>
-            <li>Content that is difficult to read on mobile</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
-    <section class="intro" id="intro">
+    <section aria-labelledby="testimonials-heading">
       <div class="container">
-        <h2>Intro</h2>
-        <p>
-          We review websites to identify accessibility and usability problems that may
-          prevent people from finding information, completing tasks, or getting in touch.
-        </p>
-        <p>
-          Reviews are written in plain English and designed to help organisations
-          understand what may be getting in the way for users, along with what to do next.
-        </p>
+        <h2 id="testimonials-heading">Testimonials</h2>
+        <div class="testimonials">
+          <article class="testimonial">
+            <p>
+              “The review explained our website issues clearly and gave us a practical set
+              of improvements we could act on straight away.”
+            </p>
+            <p><strong>Sarah M</strong><br>School administrator</p>
+          </article>
+
+          <article class="testimonial">
+            <p>
+              “A clear and useful review that turned technical issues into plain English
+              for our team.”
+            </p>
+            <p><strong>David R</strong><br>Business owner</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="purpose" id="purpose">
+    <section id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <h2>Purpose</h2>
-        <div class="cards-3">
-          <article class="card">
-            <h3>Improve clarity</h3>
-            <p>
-              Clear structure, readable content, and logical navigation help visitors
-              understand what your website offers and where to go next.
-            </p>
-          </article>
+        <h2 id="contact-heading">Contact</h2>
+        <form
+          action="mailto:hello@siteclarity.co.uk?subject=Website%20review%20enquiry"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="Name" type="text" autocomplete="name" required>
+          </div>
 
-          <article class="card">
-            <h3>Reduce drop off</h3>
-            <p>
-              When people struggle to read content, use forms, or find the right page,
-              they often leave. Better usability helps keep them engaged.
-            </p>
-          </article>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input id="email" name="Email" type="email" autocomplete="email" required>
+          </div>
 
-          <article class="card">
-            <h3>Support accessibility</h3>
-            <p>
+          <div class="form-group">
+            <label for="website">Website address</label>
+            <input id="website" name="Website" type="url" placeholder="https://example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="Message"
+              placeholder="Tell us about your website and what you would like reviewed."
+              required
+            ></textarea>
+          </div>
+
+          <button class="button" type="submit">Send enquiry</button>
+          <p class="small" style="margin-top: 1rem;">
+            Replace hello@siteclarity.co.uk with your real email address.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Site Clarity</strong></p>
+      <p>Accessibility and usability reviews</p>
+      <p>Email: <a href="mailto:hello@siteclarity.co.uk">hello@siteclarity.co.uk</a></p>
+    </div>
+  </footer>
+</body>
+</html>         <p>
               Accessibility improvements help people using screen readers, keyboards,
               zoom, and mobile devices access your content more easily.
             </p>
