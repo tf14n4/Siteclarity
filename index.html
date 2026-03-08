@@ -1,527 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Site Clarity provides accessibility and usability reviews to help make websites easier to use."
-  />
-  <title>Site Clarity | Accessibility and Usability Reviews</title>
-  <style>
-    :root {
-      --text: #333333;
-      --bg: #ffffff;
-      --accent: #0f4c81;
-      --accent-hover: #0c3d67;
-      --border: #d9d9d9;
-      --soft: #f4f8fc;
-      --radius: 14px;
-      --max-width: 760px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Clarity | Accessibility and Usability Reviews</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+:root{
+--text:#333;
+--bg:#ffffff;
+--accent:#0f4c81;
+--accent-hover:#0c3d67;
+--border:#d9d9d9;
+--soft:#f4f8fc;
+--max-width:760px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-    }
+*{box-sizing:border-box;}
 
-    a {
-      color: var(--accent);
-    }
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+color:var(--text);
+background:var(--bg);
+}
 
-    a:hover,
-    a:focus {
-      color: var(--accent-hover);
-    }
+.container{
+width:min(100% - 2rem, var(--max-width));
+margin:auto;
+}
 
-    a:focus,
-    button:focus,
-    input:focus,
-    textarea:focus {
-      outline: 3px solid var(--accent);
-      outline-offset: 3px;
-    }
+h1,h2,h3{line-height:1.2;margin-top:0;}
+h1{font-size:clamp(2rem,5vw,3rem);}
+h2{font-size:clamp(1.5rem,4vw,2rem);}
+p{margin-bottom:1rem;}
 
-    .skip-link {
-      position: absolute;
-      left: 12px;
-      top: -48px;
-      background: var(--accent);
-      color: #ffffff;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid var(--border);
+z-index:100;
+}
 
-    .skip-link:focus {
-      top: 12px;
-    }
+.brand{
+font-weight:700;
+font-size:1.2rem;
+padding:1rem 0;
+}
 
-    .container {
-      width: min(100% - 2rem, var(--max-width));
-      margin: 0 auto;
-    }
+.hero{
+margin-top:2rem;
+background:var(--soft);
+border:1px solid var(--border);
+border-radius:12px;
+padding:2rem;
+}
 
-    header {
-      padding: 3.5rem 0 2rem;
-      background: var(--bg);
-    }
+.button{
+display:inline-block;
+background:var(--accent);
+color:#fff;
+text-decoration:none;
+font-weight:700;
+padding:.9rem 1.2rem;
+border-radius:999px;
+border:none;
+cursor:pointer;
+}
 
-    .hero {
-      background: var(--soft);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-    }
+.button:hover{
+background:var(--accent-hover);
+}
 
-    h1,
-    h2,
-    h3 {
-      line-height: 1.2;
-      margin-top: 0;
-    }
+section{
+padding-top:2.5rem;
+}
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1rem;
-    }
+.points{
+display:grid;
+gap:1rem;
+}
 
-    h2 {
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      margin-bottom: 1rem;
-    }
+.point,
+.testimonial,
+form{
+border:1px solid var(--border);
+border-radius:12px;
+padding:1.25rem;
+background:#fff;
+}
 
-    h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
+.testimonials{
+display:grid;
+gap:1rem;
+}
 
-    p {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      max-width: 65ch;
-    }
+label{
+display:block;
+font-weight:700;
+margin-bottom:.3rem;
+}
 
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      border: 0;
-      cursor: pointer;
-    }
+input,textarea{
+width:100%;
+padding:.8rem;
+border:1px solid #bbb;
+border-radius:8px;
+font:inherit;
+}
 
-    .button:hover,
-    .button:focus {
-      background: var(--accent-hover);
-      color: #ffffff;
-    }
+textarea{
+min-height:130px;
+resize:vertical;
+}
 
-    main section {
-      padding: 2.5rem 0 0;
-    }
+footer{
+margin-top:3rem;
+background:var(--accent);
+color:#fff;
+padding:2rem 0;
+}
 
-    .points {
-      display: grid;
-      gap: 1rem;
-    }
+footer a{
+color:#fff;
+}
 
-    .point,
-    .testimonial,
-    form {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #ffffff;
-    }
+@media(max-width:640px){
 
-    .point,
-    .testimonial {
-      padding: 1.25rem;
-    }
+.button{
+display:block;
+text-align:center;
+}
 
-    .testimonials {
-      display: grid;
-      gap: 1rem;
-    }
+}
 
-    form {
-      padding: 1.5rem;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      border: 1px solid #bfbfbf;
-      border-radius: 10px;
-      font: inherit;
-      color: var(--text);
-      background: #ffffff;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .small {
-      font-size: 0.95rem;
-      color: #555555;
-    }
-
-    footer {
-      margin-top: 3rem;
-      background: var(--accent);
-      color: #ffffff;
-      padding: 2rem 0;
-    }
-
-    footer a {
-      color: #ffffff;
-    }
-
-    footer a:hover,
-    footer a:focus {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-      header {
-        padding: 2rem 0 1rem;
-      }
-
-      .hero {
-        padding: 1.5rem;
-      }
-
-      .button {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header>
-    <div class="container">
-      <div class="hero">
-        <h1>Website accessibility and usability reviews</h1>
-        <p>
-          Site Clarity reviews websites to identify accessibility and usability issues
-          that may make them harder to use.
-        </p>
-        <p>
-          Reports explain findings in plain English and suggest practical improvements
-          to help websites feel clearer, easier to navigate, and easier to use on mobile.
-        </p>
-        <a class="button" href="#contact">Request a review</a>
-      </div>
-    </div>
-  </header>
+<header>
+<div class="container">
+<div class="brand">Site Clarity</div>
+</div>
+</header>
 
-  <main id="main-content">
-    <section aria-labelledby="purpose-heading">
-      <div class="container">
-        <h2 id="purpose-heading">Purpose</h2>
-        <div class="points">
-          <article class="point">
-            <h3>Clear findings</h3>
-            <p>
-              Reviews highlight common issues such as poor heading structure, unclear links,
-              weak contrast, and forms that may be difficult to use.
-            </p>
-          </article>
+<main>
 
-          <article class="point">
-            <h3>Useful suggestions</h3>
-            <p>
-              Each report focuses on practical changes that can improve clarity,
-              accessibility, and the overall user experience.
-            </p>
-          </article>
+<div class="container">
 
-          <article class="point">
-            <h3>Better outcomes</h3>
-            <p>
-              A clearer website can help more visitors stay on the page, find what they need,
-              and get in touch.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+<div class="hero">
+<h1>Website accessibility and usability reviews</h1>
 
-    <section aria-labelledby="testimonials-heading">
-      <div class="container">
-        <h2 id="testimonials-heading">Testimonials</h2>
-        <div class="testimonials">
-          <article class="testimonial">
-            <p>
-              “The review explained our website issues clearly and gave us a practical set
-              of improvements we could act on straight away.”
-            </p>
-            <p><strong>Sarah M</strong><br>School administrator</p>
-          </article>
+<p>
+Site Clarity reviews websites to identify accessibility and usability issues that may make them harder to use.
+</p>
 
-          <article class="testimonial">
-            <p>
-              “A clear and useful review that turned technical issues into plain English
-              for our team.”
-            </p>
-            <p><strong>David R</strong><br>Business owner</p>
-          </article>
-        </div>
-      </div>
-    </section>
+<p>
+Reports explain findings in plain English and suggest practical improvements to help websites feel clearer, easier to navigate, and easier to use on mobile.
+</p>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 id="contact-heading">Contact</h2>
-        <form
-          action="mailto:hello@siteclarity.co.uk?subject=Website%20review%20enquiry"
-          method="post"
-          enctype="text/plain"
-        >
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" name="Name" type="text" autocomplete="name" required>
-          </div>
+<a class="button" href="#contact">Request a review</a>
+</div>
 
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input id="email" name="Email" type="email" autocomplete="email" required>
-          </div>
 
-          <div class="form-group">
-            <label for="website">Website address</label>
-            <input id="website" name="Website" type="url" placeholder="https://example.com">
-          </div>
+<section>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="Message"
-              placeholder="Tell us about your website and what you would like reviewed."
-              required
-            ></textarea>
-          </div>
+<h2>Purpose</h2>
 
-          <button class="button" type="submit">Send enquiry</button>
-          <p class="small" style="margin-top: 1rem;">
-            Replace hello@siteclarity.co.uk with your real email address.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
+<div class="points">
 
-  <footer>
-    <div class="container">
-      <p><strong>Site Clarity</strong></p>
-      <p>Accessibility and usability reviews</p>
-      <p>Email: <a href="mailto:hello@siteclarity.co.uk">hello@siteclarity.co.uk</a></p>
-    </div>
-  </footer>
+<div class="point">
+<h3>Clear findings</h3>
+<p>Reviews highlight common issues such as weak colour contrast, unclear links, missing image descriptions, and poor heading structure.</p>
+</div>
+
+<div class="point">
+<h3>Practical suggestions</h3>
+<p>Each report focuses on realistic improvements that can make a website clearer and easier to use.</p>
+</div>
+
+<div class="point">
+<h3>Better user experience</h3>
+<p>Improving clarity and accessibility can help more visitors stay on the page and find what they need.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+Send your website address and we will run a quick accessibility check and let you know if there are any obvious issues. No obligation and no mailing list.
+</p>
+
+<form action="mailto:hello@siteclarity.co.uk?subject=Website%20review%20enquiry" method="post" enctype="text/plain">
+
+<label for="name">Name</label>
+<input id="name" name="Name" type="text" required>
+
+<label for="email">Email</label>
+<input id="email" name="Email" type="email" required>
+
+<label for="website">Website</label>
+<input id="website" name="Website" type="url" placeholder="https://example.com">
+
+<label for="message">Message</label>
+<textarea id="message" name="Message" placeholder="Tell us about your website"></textarea>
+
+<br><br>
+
+<button class="button" type="submit">Request a quick review</button>
+
+</form>
+
+</section>
+
+
+<section>
+
+<h2>Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>“The review explained our website issues clearly and gave us improvements we could act on immediately.”</p>
+<p><strong>Sarah M</strong><br>School administrator</p>
+</div>
+
+<div class="testimonial">
+<p>“A really helpful review that turned technical accessibility issues into plain English.”</p>
+<p><strong>David R</strong><br>Business owner</p>
+</div>
+
+</div>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<p><strong>Site Clarity</strong></p>
+<p>Accessibility and usability reviews</p>
+<p>Email: <a href="mailto:hello@siteclarity.co.uk">hello@siteclarity.co.uk</a></p>
+
+</div>
+
+</footer>
+
 </body>
-</html>         <p>
-              Accessibility improvements help people using screen readers, keyboards,
-              zoom, and mobile devices access your content more easily.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="examples" id="examples">
-      <div class="container">
-        <h2>Real life examples</h2>
-        <p>
-          These are examples of the kinds of findings that often appear in website reviews.
-        </p>
-
-        <div class="example-grid">
-          <article class="example">
-            <strong>Example 1</strong>
-            <h3>Contact button hard to see</h3>
-            <p>
-              A call to action used pale blue text on a white background. This made the
-              button difficult to notice and harder to read for some users.
-            </p>
-            <p>
-              <strong>Suggested improvement:</strong> Increase colour contrast and make the
-              button label more direct.
-            </p>
-          </article>
-
-          <article class="example">
-            <strong>Example 2</strong>
-            <h3>Homepage structure unclear</h3>
-            <p>
-              A page used bold text for headings instead of real heading tags. Screen
-              reader users could not navigate the page structure properly.
-            </p>
-            <p>
-              <strong>Suggested improvement:</strong> Use clear H1, H2 and H3 headings in
-              a logical order.
-            </p>
-          </article>
-
-          <article class="example">
-            <strong>Example 3</strong>
-            <h3>Form difficult to complete on mobile</h3>
-            <p>
-              A contact form had small touch targets and missing labels. This made it less
-              clear and harder to use on smaller screens.
-            </p>
-            <p>
-              <strong>Suggested improvement:</strong> Add visible labels, larger fields,
-              and mobile friendly spacing.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <h2>Customer testimonials</h2>
-        <p class="small-text">
-          Replace these with real client feedback when available.
-        </p>
-
-        <div class="testimonial-grid">
-          <article class="testimonial">
-            <p class="quote">
-              “The review explained our website issues clearly and gave us a practical list
-              of changes we could act on straight away.”
-            </p>
-            <p><strong>Sarah M</strong><br />School administrator</p>
-          </article>
-
-          <article class="testimonial">
-            <p class="quote">
-              “Helpful, clear, and easy to understand. The findings made it obvious where
-              customers may have been getting stuck.”
-            </p>
-            <p><strong>David R</strong><br />Small business owner</p>
-          </article>
-
-          <article class="testimonial">
-            <p class="quote">
-              “A really useful review that translated technical accessibility problems into
-              plain English for our team.”
-            </p>
-            <p><strong>Lisa T</strong><br />Charity communications lead</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contact</h2>
-          <p>
-            Use the form to request a review or ask a question. The message will open in
-            the visitor’s email app and send the details to your chosen email address.
-          </p>
-          <p>
-            Replace the email address in the form action and footer with your real address.
-          </p>
-
-          <p><strong>Email:</strong> <a href="mailto:hello@siteclarity.co.uk">hello@siteclarity.co.uk</a></p>
-          <p><strong>Service:</strong> Accessibility and usability reviews</p>
-          <p><strong>Location:</strong> United Kingdom</p>
-        </div>
-
-        <!-- Replace hello@siteclarity.co.uk with your real email address -->
-        <form
-          action="mailto:hello@siteclarity.co.uk?subject=Website%20review%20enquiry"
-          method="post"
-          enctype="text/plain"
-        >
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" name="Name" type="text" autocomplete="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input id="email" name="Email" type="email" autocomplete="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="website">Website address</label>
-            <input
-              id="website"
-              name="Website"
-              type="url"
-              placeholder="https://example.com"
-              inputmode="url"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">How can we help?</label>
-            <textarea
-              id="message"
-              name="Message"
-              placeholder="Tell us a little about your website and what you would like reviewed."
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit">Send enquiry</button>
-          <p class="small-text" style="margin-top: 1rem;">
-            Note: mailto forms rely on the visitor having an email app set up on their
-            device. For more reliable form delivery later, connect the form to a service
-            such as Formspree or a custom email handler.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <p><strong>Site Clarity</strong></p>
-        <p>Accessibility and usability reviews</p>
-        <p>Email: <a href="mailto:hello@siteclarity.co.uk">hello@siteclarity.co.uk</a></p>
-      </div>
-
-      <div>
-        <p><a href="#top">Back to top</a></p>
-      </div>
-    </div>
-  </footer>
-</body>
-        </html>
+  </html>
