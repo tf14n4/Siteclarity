@@ -278,17 +278,17 @@ textarea{
   color:#333;
 }
 
-.card p:first-child{
-  font-style:italic;
-  margin-bottom:1rem;
+.card p:first-of-type{
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.card p:first-child::before{
-  content:"“";
+.card p:first-of-type::before{
+  content: "“";
 }
 
-.card p:first-child::after{
-  content:"”";
+.card p:first-of-type::after{
+  content: "”";
 }
 
 .card strong{
