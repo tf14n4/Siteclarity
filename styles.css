@@ -134,12 +134,13 @@ form{
   border:1px solid var(--border);
   border-radius:var(--radius);
   padding:2rem;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
 
 h1,
 h2,
 h3{
-  line-height:1.2;
+  line-height:1.15;
   margin-top:0;
   margin-bottom:1rem;
   color:var(--text);
@@ -147,23 +148,21 @@ h3{
 }
 
 h1{
-  font-size:2.6rem;
-  line-height:1.15;
+  font-size:2.8rem;
 }
 
 h2{
-  font-size:2rem;
+  font-size:2.1rem;
 }
 
 h3{
-  font-size:1.25rem;
+  font-size:1.2rem;
 }
 
 p{
   margin-top:0;
-  margin-bottom:1.1rem;
+  margin-bottom:1.25rem;
 }
-
 .button-wrap{
   text-align:center;
   margin-top:1.8rem;
@@ -223,13 +222,19 @@ textarea{
   gap:2rem;
 }
 
+@media (min-width:800px){
+  .cards{
+	  grid-template-columns:repeat(3, 1fr);
+  }
+}
+
 .card{
   background:#333;
   color:#fff;
   border-radius:var(--radius);
   padding:1.5rem 1.7rem;
   border:none;
-  box-shadow:0 4px 16px rgba(0,0,0,0.15);
+  box-shadow:0 8px 24px rgba(0,0,0,0.18);
 }
 
 .card p{
@@ -290,10 +295,10 @@ footer p{
   font-size:0.9rem;
 }
 
-@media (max-width:700px){
+@media (max-width:800px){
 
   body{
-    font-size:19px;
+    font-size:18px;
   }
 
   .brand{
@@ -303,33 +308,56 @@ footer p{
   .tagline{
     display:block;
     margin-left:0;
-    margin-top:0.1rem;
-    font-size:0.86rem;
+    margin-top:0.15rem;
+    font-size:0.9rem;
   }
 
   section{
-    padding:2.4rem 0;
+    padding:3rem 0;
   }
 
   .hero,
   form{
-    padding:1.6rem 1.2rem;
+    padding:1.5rem 1.25rem;
   }
 
   h1{
-    font-size:2rem;
+    font-size:2.1rem;
+    line-height:1.15;
   }
 
   h2{
-    font-size:1.6rem;
+    font-size:1.7rem;
+    line-height:1.2;
   }
 
   h3{
     font-size:1.15rem;
+    line-height:1.25;
   }
 
   .button{
     width:100%;
     min-width:0;
+  }
+
+  .card{
+    padding:1.25rem 1.35rem;
+  }
+}
+
+@media (max-width:480px){
+
+  .container{
+    width:min(100% - 1.25rem, var(--max-width));
+  }
+
+  .hero,
+  form{
+    padding:1.25rem 1rem;
+  }
+
+  h1{
+    font-size:1.9rem;
   }
 }
