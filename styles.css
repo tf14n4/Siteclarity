@@ -152,6 +152,9 @@ section{
 .testimonials-section{
   background:var(--section-light);
 }
+.next-section{
+  background:var(--section-light);
+}
 
 .hero,
 form{
