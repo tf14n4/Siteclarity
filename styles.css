@@ -1,19 +1,5 @@
 :root{
-  --page-bg:#ffffff;
-  --text:#333333;
-  --text-soft:#4b5563;
-  --muted:#6b7280;
-
-  --brand:#4d647a;
-  --brand-hover:#405467;
-
-  --section-blue:#eef3f7;
-  --section-blue-2:#f6f9fb;
-  --section-white:#ffffff;
-
-  --border:#d9e1e8;
-  --shadow:0 10px 24px rgba(0,0,0,0.05);
-
+  --text:#333;
   --max-width:820px;
   --radius:18px;
 }
@@ -28,30 +14,30 @@ html{
 
 body{
   margin:0;
-  background:var(--page-bg);
-  color:var(--text);
+  background:#fff;
+  color:#333;
   font-family:Arial, Helvetica, sans-serif;
   font-size:18px;
-  line-height:1.72;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
 
 a{
-  color:var(--brand);
+  color:#333;
 }
 
 a:hover,
 a:focus{
-  color:var(--brand-hover);
+  text-decoration:underline;
 }
 
 a:focus,
 button:focus,
 input:focus,
 textarea:focus{
-  outline:3px solid var(--brand);
-  outline-offset:3px;
+  outline:2px solid #333;
+  outline-offset:2px;
 }
 
 .container{
@@ -60,97 +46,65 @@ textarea:focus{
 }
 
 header{
-  background:#ffffff;
-  border-bottom:1px solid var(--border);
+  background:#fff;
+  border-bottom:1px solid #333;
 }
 
 .brand{
   padding:1rem 0;
   font-size:1.15rem;
   font-weight:700;
-  color:var(--text);
 }
 
 .tagline{
   font-weight:400;
-  color:var(--muted);
   margin-left:0.35rem;
   font-size:0.95rem;
 }
 
 section{
-  padding:3.25rem 0;
-}
-
-.hero-section{
-  background:var(--section-white);
-  padding-top:2rem;
+  padding:3rem 0;
 }
 
 .hero{
-  background:var(--section-blue);
-  border:1px solid var(--border);
-  border-radius:26px;
-  padding:2.4rem 2rem;
-  box-shadow:var(--shadow);
-}
-
-.why-section{
-  background:var(--section-white);
-}
-
-.receive-section{
-  background:var(--section-blue);
-}
-
-.process-section{
-  background:var(--section-white);
-}
-
-.contact-section{
-  background:var(--section-blue-2);
-}
-
-.testimonials-section{
-  background:var(--section-white);
+  border:1px solid #333;
+  border-radius:var(--radius);
+  padding:2rem;
 }
 
 h1,
 h2,
 h3{
-  line-height:1.18;
+  line-height:1.2;
   margin-top:0;
-  letter-spacing:-0.02em;
-  color:var(--text);
+  color:#333;
 }
 
 h1{
-  font-size:clamp(2.2rem, 6vw, 3.7rem);
+  font-size:clamp(2.2rem, 6vw, 3.5rem);
   margin-bottom:1.2rem;
   max-width:12ch;
 }
 
 h2{
-  font-size:clamp(1.6rem, 4vw, 2.2rem);
+  font-size:clamp(1.6rem, 4vw, 2.1rem);
   margin-bottom:1rem;
   max-width:18ch;
 }
 
 h3{
-  font-size:1.12rem;
+  font-size:1.1rem;
   margin-bottom:0.5rem;
 }
 
 p{
   margin-top:0;
-  margin-bottom:1.15rem;
+  margin-bottom:1.1rem;
   max-width:35em;
-  color:var(--text-soft);
 }
 
 .lead{
-  font-size:1.06em;
-  color:var(--text);
+  font-size:1.05em;
 }
 
 .button-wrap{
@@ -160,9 +114,9 @@ p{
 
 .button{
   display:inline-block;
-  min-width:245px;
-  background:var(--brand);
-  color:#ffffff;
+  min-width:240px;
+  background:#333;
+  color:#fff;
   text-decoration:none;
   text-align:center;
   font-weight:700;
@@ -170,13 +124,12 @@ p{
   border:none;
   border-radius:999px;
   cursor:pointer;
-  box-shadow:0 8px 20px rgba(77,100,122,0.18);
 }
 
 .button:hover,
 .button:focus{
-  background:var(--brand-hover);
-  color:#ffffff;
+  background:#333;
+  color:#fff;
 }
 
 .section-intro{
@@ -193,11 +146,9 @@ p{
 .testimonial,
 .step,
 form{
-  background:#ffffff;
-  border:1px solid var(--border);
+  border:1px solid #333;
   border-radius:var(--radius);
-  padding:1.35rem;
-  box-shadow:var(--shadow);
+  padding:1.3rem;
 }
 
 .step{
@@ -211,7 +162,6 @@ form{
 label{
   display:block;
   font-weight:700;
-  color:var(--text);
   margin-top:1rem;
   margin-bottom:0.35rem;
 }
@@ -219,17 +169,12 @@ label{
 input,
 textarea{
   width:100%;
-  padding:0.95rem 1rem;
-  border:1px solid #c4ced8;
-  border-radius:12px;
-  background:#ffffff;
-  color:var(--text);
+  padding:0.9rem 1rem;
+  border:1px solid #333;
+  border-radius:10px;
+  background:#fff;
+  color:#333;
   font:inherit;
-}
-
-input::placeholder,
-textarea::placeholder{
-  color:var(--muted);
 }
 
 textarea{
@@ -238,7 +183,7 @@ textarea{
 }
 
 .helper-text{
-  color:var(--text-soft);
+  max-width:40em;
 }
 
 .form-button-wrap{
@@ -247,26 +192,23 @@ textarea{
 }
 
 footer{
-  background:var(--brand);
-  color:#ffffff;
-  padding:2.75rem 0;
+  border-top:1px solid #333;
+  padding:2.5rem 0;
   text-align:center;
 }
 
 footer a{
-  color:#ffffff;
+  color:#333;
 }
 
 footer a:hover,
 footer a:focus{
-  color:#ffffff;
   text-decoration:underline;
 }
 
 footer p{
   margin-bottom:0.45rem;
   max-width:none;
-  color:#ffffff;
 }
 
 .footer-brand{
@@ -274,18 +216,13 @@ footer p{
   font-size:1.08rem;
 }
 
-.footer-tagline{
-  opacity:0.92;
-  margin-bottom:0.85rem;
-}
-
 .footer-copy{
   margin-top:1rem;
   font-size:0.9rem;
-  opacity:0.8;
 }
 
 @media (max-width:700px){
+
   body{
     font-size:19px;
   }
@@ -302,19 +239,18 @@ footer p{
   }
 
   section{
-    padding:2.6rem 0;
+    padding:2.4rem 0;
   }
 
   .hero{
-    padding:1.8rem 1.35rem;
-    border-radius:22px;
+    padding:1.6rem 1.2rem;
   }
 
   .card,
   .testimonial,
   .step,
   form{
-    padding:1.15rem;
+    padding:1.1rem;
   }
 
   .button{
