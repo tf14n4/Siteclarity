@@ -138,7 +138,7 @@ section{
 }
 
 .process-section{
-  background:#E6A800;
+  background:var(--section-dark);
 }
 
 .contact-section{
