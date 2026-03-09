@@ -130,11 +130,11 @@ section{
 }
 
 .why-section{
-  background:#fff;
+  background:var(--section-light);
 }
 
 .what-section{
-  background:#fff;
+  background:var(--section-light);
 }
 
 .process-section{
@@ -146,7 +146,7 @@ section{
 }
 
 .testimonials-section{
-  background:#fff;
+  background:var(--section-light);
 }
 
 .hero,
@@ -267,7 +267,7 @@ textarea{
 }
 
 .card p{
-  color:#fff;
+  color:#333;
 }
 
 .card p:first-child{
