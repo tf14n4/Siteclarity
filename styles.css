@@ -134,11 +134,11 @@ section{
 }
 
 .what-section{
-  background:#fdbb2f;
+  background:#fff;
 }
 
 .process-section{
-  background:var(--section-dark);
+  background:#fdbb2f;
 }
 
 .contact-section{
