@@ -134,7 +134,7 @@ section{
 }
 
 .what-section{
-  background:var(--section-light);
+  background:#ffffff;
 }
 
 .process-section{
@@ -146,7 +146,7 @@ section{
 }
 
 .about-section{
-  background:var(--section-light);
+  background:#ffffff;
 }
 
 .testimonials-section{
