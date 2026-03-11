@@ -1,7 +1,7 @@
 :root{
   --text:#333;
   --border:#e5e5e5;
-  --input-border:#dddddd;
+  --input-border:#767676;
 
   --accent:#2b6cb0;
   --accent-hover:#173c5d;
@@ -13,6 +13,11 @@
   --max-width:920px;
   --radius:18px;
 }
+
+::placeholder {
+  color: #6b7280;
+}
+
 
 *{
   box-sizing:border-box;
@@ -48,7 +53,9 @@ input:focus,
 textarea:focus{
   outline:2px solid var(--focus);
   outline-offset:2px;
+  border-color:var(--focus);
 }
+
 
 ol{
   margin:0;
@@ -246,6 +253,7 @@ textarea{
   color:var(--text);
   font:inherit;
 }
+
 
 textarea{
   min-height:140px;
