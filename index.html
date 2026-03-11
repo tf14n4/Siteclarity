@@ -226,16 +226,17 @@ A short review can quickly highlight accessibility barriers and usability issues
 </p>
 	
 <label for="name">Name</label>
-<input id="name" type="text" name="name" required>
+<input id="name" type="text" name="name" autocomplete="name" required>
 
 <label for="email">Email</label>
-<input id="email" type="email" name="email" required>
+<input id="email" type="email" name="email" autocomplete="email" required>
 
 <label for="website">Website</label>
-<input id="website" type="text" name="website" placeholder="example.com" required>
+<input id="website" type="url" name="website" autocomplete="url" placeholder="example.com" required>
 
 <label for="message">Message</label>
 <textarea id="message" name="message"></textarea>
+
 
 <div class="form-button-wrap">
 <button class="button" type="submit">Request a review</button>
