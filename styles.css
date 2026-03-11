@@ -88,13 +88,14 @@ header{
 }
 
 .brand{
-    margin:0;
+  padding: 1rem 0 0 0;
+  margin:0;
 }
 
 .brand a{
   display:inline-flex;
   align-items:center;
-  gap:0.5rem;
+  gap:0rem;
   text-decoration:none;
   color:var(--text);
 }
