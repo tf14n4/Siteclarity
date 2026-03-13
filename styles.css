@@ -320,11 +320,14 @@ footer{
 
 footer a{
   color:#fff;
+  display:inline-block;
+  padding:10px 0;
+  line-height:1.4;
+  min-height:44px;
 }
 
 footer a:hover,
 footer a:focus{
-  color:#fff;
   text-decoration:underline;
 }
 
@@ -332,7 +335,6 @@ footer p{
   margin-bottom:0.35rem;
   max-width:none;
   color:#fff;
-  padding: 5px 0;
 }
 
 .footer-brand{
