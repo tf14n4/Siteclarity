@@ -163,7 +163,7 @@ section{
   background:var(--section-light);
 }
 .next-section{
-  background:var(--section-dark);
+   background:var(--section-light);
 }
 
 .hero,
