@@ -178,15 +178,13 @@ section{
 
 /* Main content blocks */
 
-.hero,
-form{
+.hero {
   background:#fff;
   border:1px solid var(--border);
   border-radius:var(--radius);
   padding:2rem;
   box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
-
 h1,
 h2,
 h3{
@@ -439,8 +437,7 @@ footer p{
     padding:3rem 0;
   }
 
-  .hero,
-  form{
+  .hero {
     padding:1.5rem 1.25rem;
   }
 
@@ -475,8 +472,7 @@ footer p{
     width:min(100% - 1.25rem, var(--max-width));
   }
 
-  .hero,
-  form{
+  .hero {
     padding:1.25rem 1rem;
   }
 
