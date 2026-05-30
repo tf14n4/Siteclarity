@@ -334,7 +334,9 @@ textarea{
 
 /*final cta*/
 .final-cta {
-  text-align: center;
+  max-width:600px;
+  margin:0 auto;
+  text-align:center;
 }
 
 
