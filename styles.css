@@ -132,7 +132,7 @@ header{
 /* Sections */
 
 section{
-  padding:6rem 0;
+  padding:4rem 0;
 }
 
 .hero-section{
@@ -149,35 +149,6 @@ section{
 .why-section,
 .process-section,
 .implementation-section{
-  background:var(--section-light);
-}
-
-.scope-section{
-  background:#fff;
-}
-
-.testimonials-section{
-  background:var(--section-light);
-}
-
-.about-section{
-  background:#fff;
-}
-
-.process-section{
-  background:var(--section-light);
-}
-
-.example-section{
-  background:#fff;
-  padding:4rem 0;
-}
-
-.contact-section{
-  background:var(--section-dark);
-}
-
-.next-section{
   background:var(--section-light);
 }
 
@@ -344,7 +315,7 @@ textarea{
   width:100%;
   max-width:560px;
   height:auto;
-  margin:1.5rem auto 0;
+  margin:3rem auto 0;
   border-radius:12px;
   box-shadow:
   0 0 18px rgba(0,0,0,0.08),
