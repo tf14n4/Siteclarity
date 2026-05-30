@@ -139,11 +139,16 @@ section{
   background:var(--section-dark);
 }
 
-.why-section{
+.issues-section,
+.fit-section,
+.what-section,
+.about-section{
   background:#fff;
 }
 
-.what-section{
+.why-section,
+.process-section,
+.implementation-section{
   background:var(--section-light);
 }
 
