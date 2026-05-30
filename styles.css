@@ -149,7 +149,13 @@ section{
 .why-section,
 .process-section,
 .implementation-section{
-  background:var(--section-light);
+  background:linear-gradient(
+    180deg,
+    #fff 0%,
+    var(--section-light) 10%,
+    var(--section-light) 90%,
+    #fff 100%
+  );
 }
 
 /* Main content blocks */
