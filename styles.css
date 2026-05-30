@@ -7,7 +7,7 @@
   --accent-hover:#1f4e79;
   --focus:#1f4e79;
 
-  --section-light:#f7f7f7;
+  --section-light:#fafafa;
   --section-dark:#1f4e79;
 
   --max-width:1100px;
@@ -152,8 +152,10 @@ section{
   background:linear-gradient(
     180deg,
     #fff 0%,
-    var(--section-light) 10%,
-    var(--section-light) 90%,
+    #fafafa 18%,
+    var(--section-light) 35%,
+    var(--section-light) 65%,
+    #fafafa 82%,
     #fff 100%
   );
 }
